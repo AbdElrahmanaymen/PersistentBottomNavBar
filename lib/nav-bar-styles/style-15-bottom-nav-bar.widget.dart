@@ -66,11 +66,11 @@ class BottomNavStyle15 extends StatelessWidget {
                           end: Alignment(
                               -0.2368917167186737, 0.07294762879610062),
                           colors: [
-                            (!isSelected)
+                            (isSelected)
                                 ? Color.fromRGBO(
                                     149, 46, 191, 0.9800000190734863)
                                 : Color(0xFF484451),
-                            (!isSelected)
+                            (isSelected)
                                 ? Color.fromRGBO(214, 41, 118, 1)
                                 : Color(0xFF484451)
                           ]).createShader(
