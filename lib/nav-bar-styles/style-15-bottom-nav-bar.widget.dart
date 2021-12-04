@@ -58,26 +58,32 @@ class BottomNavStyle15 extends StatelessWidget {
                               child: Material(
                                 type: MaterialType.transparency,
                                 child: FittedBox(
-                                    child: Text(
+                                    child: ShaderMask(
+                                      shaderCallback: (bounds) => LinearGradient(
+                          transform: GradientRotation(-180 * (math.pi / 180)),
+                          begin:
+                              Alignment(1.396263599395752, 0.2368917167186737),
+                          end: Alignment(
+                              -0.2368917167186737, 0.07294762879610062),
+                          colors: [
+                            (isSelected)
+                                ? Color.fromRGBO(
+                                    149, 46, 191, 0.9800000190734863)
+                                : Color(0xFF484451),
+                            (isSelected)
+                                ? Color.fromRGBO(214, 41, 118, 1)
+                                : Color(0xFF484451)
+                          ]).createShader(
+        Rect.fromLTWH(0, 0, bounds.width, bounds.height),
+      ),
+                                      Text(
                                   item.title!,
-                                  style: item.textStyle != null
-                                      ? (item.textStyle!.apply(
-                                          color: isSelected
-                                              ? (item.activeColorSecondary ==
-                                                      null
-                                                  ? item.activeColorPrimary
-                                                  : item.activeColorSecondary)
-                                              : item.inactiveColorPrimary))
+                                  
                                       : TextStyle(
-                                          color: isSelected
-                                              ? (item.activeColorSecondary ==
-                                                      null
-                                                  ? item.activeColorPrimary
-                                                  : item.activeColorSecondary)
-                                              : item.inactiveColorPrimary,
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 12.0),
-                                )),
+                                          
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 8),
+                                ))),
                               ),
                             )
                     ],
@@ -107,15 +113,7 @@ class BottomNavStyle15 extends StatelessWidget {
                       margin: EdgeInsets.only(top: 2.0),
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-//                         color: item.activeColorPrimary,
-                        gradient: LinearGradient(
-                  transform: GradientRotation(-180 * (pi / 180)),
-                  begin: Alignment(1.396263599395752, 0.2368917167186737),
-                  end: Alignment(-0.2368917167186737, 0.07294762879610062),
-                  colors: [
-                    Color.fromRGBO(149, 46, 191, 0.9800000190734863),
-                    Color.fromRGBO(214, 41, 118, 1)
-                  ]),
+                        color: item.activeColorPrimary,
                         border:
                             Border.all(color: Colors.transparent, width: 5.0),
                         boxShadow: this.navBarDecoration!.boxShadow,
