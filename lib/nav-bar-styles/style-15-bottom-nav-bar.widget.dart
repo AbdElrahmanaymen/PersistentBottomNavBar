@@ -78,8 +78,7 @@ class BottomNavStyle15 extends StatelessWidget {
       ),
                                       child:Text(
                                   item.title!,
-                                  
-                                      : TextStyle(
+                                   TextStyle(
                                           
                                           fontWeight: FontWeight.w500,
                                           fontSize: 8),
