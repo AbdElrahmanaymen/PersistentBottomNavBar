@@ -109,7 +109,14 @@ class BottomNavStyle15 extends StatelessWidget {
                       margin: EdgeInsets.only(top: 2.0),
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: item.activeColorPrimary,
+                        gradient: LinearGradient(
+                  transform: GradientRotation(-180 * (pi / 180)),
+                  begin: Alignment(1.396263599395752, 0.2368917167186737),
+                  end: Alignment(-0.2368917167186737, 0.07294762879610062),
+                  colors: [
+                    Color.fromRGBO(149, 46, 191, 0.9800000190734863),
+                    Color.fromRGBO(214, 41, 118, 1)
+                  ]),
                         border:
                             Border.all(color: Colors.transparent, width: 5.0),
                         boxShadow: this.navBarDecoration!.boxShadow,
