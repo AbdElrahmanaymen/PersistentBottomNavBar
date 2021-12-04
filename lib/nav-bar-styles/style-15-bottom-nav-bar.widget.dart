@@ -60,7 +60,7 @@ class BottomNavStyle15 extends StatelessWidget {
                                 child: FittedBox(
                                     child: ShaderMask(
                                       shaderCallback: (bounds) => LinearGradient(
-                          transform: GradientRotation(-180 * (math.pi / 180)),
+                          transform: GradientRotation(-180 * (pi / 180)),
                           begin:
                               Alignment(1.396263599395752, 0.2368917167186737),
                           end: Alignment(
