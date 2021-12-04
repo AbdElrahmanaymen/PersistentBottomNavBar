@@ -76,7 +76,7 @@ class BottomNavStyle15 extends StatelessWidget {
                           ]).createShader(
         Rect.fromLTWH(0, 0, bounds.width, bounds.height),
       ),
-                                      Text(
+                                      child:Text(
                                   item.title!,
                                   
                                       : TextStyle(
